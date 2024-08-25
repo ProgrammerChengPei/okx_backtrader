@@ -1,0 +1,312 @@
+2024-08-24 22-16-21,470 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-24 22-16-23,456 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"61ba97d3"}}
+2024-08-24 22-16-28,475 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"61ba97d3"}}
+2024-08-24 22-16-28,476 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"61ba97d3"}}
+2024-08-24 22-16-28,476 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"61ba97d3"}}
+2024-08-24 22-16-28,477 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"61ba97d3"}}
+2024-08-24 22-16-28,478 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"61ba97d3"}}
+2024-08-24 22-16-28,478 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"61ba97d3"}}
+2024-08-24 22-16-28,551 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"64125.3","crossLiab":"","disEq":"62842.794","eq":"1","eqUsd":"64125.3","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75832.28","uTime":"1724508989198","upl":""}]}}
+2024-08-24 22-16-28,551 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"balance_and_position","uid":"509030892589736372"},"data":[{"balData":[{"cashBal":"1","ccy":"BTC","uTime":"1723258110646"},{"cashBal":"100","ccy":"OKB","uTime":"1723258110654"},{"cashBal":"1","ccy":"ETH","uTime":"1723258110660"},{"cashBal":"5000","ccy":"USDT","uTime":"1723258110667"}],"eventType":"snapshot","pTime":"1724508989198","posData":[],"trades":[]}]}}
+2024-08-24 22-16-28,623 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-24 22-16-28,765 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"unsubscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"61ba97d3"}}
+2024-08-24 22-16-28,937 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-24 23-11-26,212 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-24 23-11-26,982 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-24 23-11-27,351 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-24 23-11-27,351 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-24 23-11-27,351 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-24 23-11-27,351 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-24 23-11-27,351 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: LMmmMzZg+vefm7jHJNd0FQ==
+2024-08-24 23-11-27,352 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-24 23-11-27,352 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-24 23-11-27,352 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-24 23-11-27,586 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-24 23-11-27,586 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 15:11:27 GMT
+2024-08-24 23-11-27,586 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-24 23-11-27,586 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-24 23-11-27,587 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: /HhYsWp/Ae8g1cODFs4zls9KoqQ=
+2024-08-24 23-11-27,587 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-24 23-11-27,587 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-24 23-11-27,587 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=bKMEn74Qmzw3JspAToVeUyZiT1rwQfNtUIznFi4DevI-1724512287-1.0.1.1-hA5_OnUk90atw8eTjDx892o6bCQhYEUDGO6Z4PD0MXHJZrlAratbbzuVbl1Rg9h5Ii0aY34srxEWzhRYFhMsWg; path=/; expires=Sat, 24-Aug-24 15:41:27 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-24 23-11-27,587 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-24 23-11-27,587 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b844666cf47a8da-SIN
+2024-08-24 23-11-27,591 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-24 23-11-27,591 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...5tyT0eIRQH2EqA5TEA="}]}' [184 bytes]
+2024-08-24 23-11-27,867 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"cc60a6cf"}' [57 bytes]
+2024-08-24 23-11-27,867 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"cc60a6cf"}}
+2024-08-24 23-11-32,612 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-24 23-11-32,735 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"cc60a6cf"}' [81 bytes]
+2024-08-24 23-11-32,735 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"cc60a6cf"}' [85 bytes]
+2024-08-24 23-11-32,735 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"cc60a6cf"}' [82 bytes]
+2024-08-24 23-11-32,735 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"cc60a6cf"}}
+2024-08-24 23-11-32,735 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"cc60a6cf"}}
+2024-08-24 23-11-32,735 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"cc60a6cf"}}
+2024-08-24 23-11-32,737 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"cc60a6cf"}' [86 bytes]
+2024-08-24 23-11-32,738 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"cc60a6cf"}' [85 bytes]
+2024-08-24 23-11-32,738 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"cc60a6cf"}' [99 bytes]
+2024-08-24 23-11-32,739 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"cc60a6cf"}}
+2024-08-24 23-11-32,739 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"cc60a6cf"}}
+2024-08-24 23-11-32,740 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"cc60a6cf"}}
+2024-08-24 23-11-32,782 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4512293117","upl":""}]}' [877 bytes]
+2024-08-24 23-11-32,782 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-24 23-11-32,782 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"64129.8","crossLiab":"","disEq":"62847.204000000005","eq":"1","eqUsd":"64129.8","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75864.43000000001","uTime":"1724512293117","upl":""}]}}
+2024-08-24 23-11-32,783 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"balance_and_position","uid":"509030892589736372"},"data":[{"balData":[{"cashBal":"1","ccy":"BTC","uTime":"1723258110646"},{"cashBal":"100","ccy":"OKB","uTime":"1723258110654"},{"cashBal":"1","ccy":"ETH","uTime":"1723258110660"},{"cashBal":"5000","ccy":"USDT","uTime":"1723258110667"}],"eventType":"snapshot","pTime":"1724512293117","posData":[],"trades":[]}]}}
+2024-08-24 23-11-32,925 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-24 23-11-32,926 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-24 23-11-33,060 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"cc60a6cf"}' [87 bytes]
+2024-08-24 23-11-33,061 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"unsubscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"cc60a6cf"}}
+2024-08-24 23-11-33,236 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-24 23-11-33,236 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-24 23-11-43,240 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-24 23-11-43,240 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-24 23-11-43,329 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-24 23-14-04,731 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-24 23-14-06,208 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"50480b70"}}
+2024-08-24 23-14-10,943 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"50480b70"}}
+2024-08-24 23-14-10,943 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"50480b70"}}
+2024-08-24 23-14-10,943 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"50480b70"}}
+2024-08-24 23-14-10,955 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"50480b70"}}
+2024-08-24 23-14-10,956 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"50480b70"}}
+2024-08-24 23-14-10,956 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"50480b70"}}
+2024-08-24 23-14-11,049 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"64112.2","crossLiab":"","disEq":"62829.956","eq":"1","eqUsd":"64112.2","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75854.72","uTime":"1724512451358","upl":""}]}}
+2024-08-24 23-14-11,049 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"balance_and_position","uid":"509030892589736372"},"data":[{"balData":[{"cashBal":"1","ccy":"BTC","uTime":"1723258110646"},{"cashBal":"100","ccy":"OKB","uTime":"1723258110654"},{"cashBal":"1","ccy":"ETH","uTime":"1723258110660"},{"cashBal":"5000","ccy":"USDT","uTime":"1723258110667"}],"eventType":"snapshot","pTime":"1724512451358","posData":[],"trades":[]}]}}
+2024-08-24 23-14-11,120 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-24 23-14-11,253 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"unsubscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"50480b70"}}
+2024-08-24 23-14-11,433 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-24 23-17-37,814 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-24 23-17-40,999 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"5df13b10"}}
+2024-08-24 23-17-45,996 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"5df13b10"}}
+2024-08-24 23-17-45,997 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"5df13b10"}}
+2024-08-24 23-17-45,997 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"5df13b10"}}
+2024-08-24 23-17-45,997 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"5df13b10"}}
+2024-08-24 23-17-45,998 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"5df13b10"}}
+2024-08-24 23-17-45,998 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"5df13b10"}}
+2024-08-24 23-17-46,058 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"64084.1","crossLiab":"","disEq":"62802.418","eq":"1","eqUsd":"64084.1","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75826.84","uTime":"1724512666257","upl":""}]}}
+2024-08-24 23-17-46,092 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-24 23-17-46,403 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 00-00-45,595 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-00-47,521 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"d5ec42fd"}}
+2024-08-25 00-00-52,533 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"d5ec42fd"}}
+2024-08-25 00-00-52,533 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"d5ec42fd"}}
+2024-08-25 00-00-52,533 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"d5ec42fd"}}
+2024-08-25 00-00-52,533 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"d5ec42fd"}}
+2024-08-25 00-00-52,533 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"d5ec42fd"}}
+2024-08-25 00-00-52,534 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"d5ec42fd"}}
+2024-08-25 00-00-52,630 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"64015.2","crossLiab":"","disEq":"62734.89599999999","eq":"1","eqUsd":"64015.2","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75744.96999999999","uTime":"1724515252969","upl":""}]}}
+2024-08-25 00-00-52,630 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"balance_and_position","uid":"509030892589736372"},"data":[{"balData":[{"cashBal":"1","ccy":"BTC","uTime":"1723258110646"},{"cashBal":"100","ccy":"OKB","uTime":"1723258110654"},{"cashBal":"1","ccy":"ETH","uTime":"1723258110660"},{"cashBal":"5000","ccy":"USDT","uTime":"1723258110667"}],"eventType":"snapshot","pTime":"1724515252970","posData":[],"trades":[]}]}}
+2024-08-25 00-00-52,703 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 00-00-53,010 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 00-01-43,551 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-03-22,636 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-03-23,842 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"886953cb"}}
+2024-08-25 00-03-29,018 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 00-03-29,334 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 00-04-30,556 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-04-31,805 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"4436f956"}}
+2024-08-25 00-04-36,981 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 00-04-37,290 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 00-05-48,252 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-05-49,901 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"fc63136d"}}
+2024-08-25 00-06-23,504 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-06-24,661 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"b72ff336"}}
+2024-08-25 00-06-29,684 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"b72ff336"}}
+2024-08-25 00-06-29,684 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"b72ff336"}}
+2024-08-25 00-06-29,684 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"b72ff336"}}
+2024-08-25 00-06-29,691 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"b72ff336"}}
+2024-08-25 00-06-29,692 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"b72ff336"}}
+2024-08-25 00-06-29,692 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"b72ff336"}}
+2024-08-25 00-06-29,720 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"64051.9","crossLiab":"","disEq":"62770.862","eq":"1","eqUsd":"64051.9","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75784.37","uTime":"1724515590067","upl":""}]}}
+2024-08-25 00-06-29,721 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"balance_and_position","uid":"509030892589736372"},"data":[{"balData":[{"cashBal":"1","ccy":"BTC","uTime":"1723258110646"},{"cashBal":"100","ccy":"OKB","uTime":"1723258110654"},{"cashBal":"1","ccy":"ETH","uTime":"1723258110660"},{"cashBal":"5000","ccy":"USDT","uTime":"1723258110667"}],"eventType":"snapshot","pTime":"1724515590067","posData":[],"trades":[]}]}}
+2024-08-25 00-06-29,836 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 00-06-30,008 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"unsubscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"b72ff336"}}
+2024-08-25 00-06-30,147 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 00-13-02,301 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 00-13-03,545 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"9541b9ae"}}
+2024-08-25 00-13-08,600 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"account","ccy":"BTC"},"connId":"9541b9ae"}}
+2024-08-25 00-13-08,601 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"9541b9ae"}}
+2024-08-25 00-13-08,601 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"subscribe","arg":{"channel":"balance_and_position"},"connId":"9541b9ae"}}
+2024-08-25 00-13-08,601 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"account","connCount":"1","connId":"9541b9ae"}}
+2024-08-25 00-13-08,601 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"orders","connCount":"1","connId":"9541b9ae"}}
+2024-08-25 00-13-08,601 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"channel-conn-count","channel":"balance_and_position","connCount":"1","connId":"9541b9ae"}}
+2024-08-25 00-13-08,622 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"account","ccy":"BTC","uid":"509030892589736372"},"data":[{"adjEq":"","borrowFroz":"","details":[{"accAvgPx":"","availBal":"1","availEq":"","borrowFroz":"","cashBal":"1","ccy":"BTC","clSpotInUseAmt":"","coinUsdPrice":"63998.4","crossLiab":"","disEq":"62718.432","eq":"1","eqUsd":"63998.4","fixedBal":"0","frozenBal":"0","imr":"","interest":"","isoEq":"0","isoLiab":"","isoUpl":"","liab":"","maxLoan":"","maxSpotInUseAmt":"","mgnRatio":"","mmr":"","notionalLever":"","openAvgPx":"","ordFrozen":"0","rewardBal":"","smtSyncEq":"0","spotBal":"","spotInUseAmt":"","spotIsoBal":"0","spotUpl":"","spotUplRatio":"","stgyEq":"0","totalPnl":"","totalPnlRatio":"","twap":"0","uTime":"1723258110646","upl":"","uplLiab":""}],"imr":"","isoEq":"","mgnRatio":"","mmr":"","notionalUsd":"","ordFroz":"","totalEq":"75737.96","uTime":"1724515988964","upl":""}]}}
+2024-08-25 00-13-08,623 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"arg":{"channel":"balance_and_position","uid":"509030892589736372"},"data":[{"balData":[{"cashBal":"1","ccy":"BTC","uTime":"1723258110646"},{"cashBal":"100","ccy":"OKB","uTime":"1723258110654"},{"cashBal":"1","ccy":"ETH","uTime":"1723258110660"},{"cashBal":"5000","ccy":"USDT","uTime":"1723258110667"}],"eventType":"snapshot","pTime":"1724515988965","posData":[],"trades":[]}]}}
+2024-08-25 00-13-08,648 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 00-13-08,833 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"unsubscribe","arg":{"channel":"orders","instType":"ANY"},"connId":"9541b9ae"}}
+2024-08-25 00-13-08,960 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 03-00-23,904 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 03-00-25,351 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"eb737cf7"}}
+2024-08-25 03-00-30,478 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 03-00-30,793 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 18-37-32,923 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 18-37-34,840 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"1f88b51c"}}
+2024-08-25 18-37-39,937 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 18-37-40,230 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 19-02-15,695 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 19-02-16,807 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"a5b21ff4"}}
+2024-08-25 19-02-21,981 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 19-02-22,294 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 19-42-48,257 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 19-42-51,293 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"2bdc2eff"}}
+2024-08-25 19-42-56,364 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 19-42-56,680 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}
+2024-08-25 19-52-11,497 |       INFO |  WsPrivate | WsPrivateAsync.py 072 | 
+Connecting to WebSocket...
+2024-08-25 19-52-13,678 |       INFO |  WsPrivate | WsPrivateAsync.py 029 | 
+Received message: {{"event":"login","msg":"","code":"0","connId":"6f9533aa"}}
+2024-08-25 19-52-18,747 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}
+2024-08-25 19-52-19,062 |       INFO |  WsPrivate | WsPrivateAsync.py 062 | 
+unsubscribe: {"op": "unsubscribe", "args": [{"channel": "account", "ccy": "BTC"}, {"channel": "balance_and_position"}]}

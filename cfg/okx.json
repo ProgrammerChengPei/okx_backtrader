@@ -1,0 +1,26 @@
+{
+  "login": {
+    "sim": {
+      "apiKey": "0c240dca-049b-4294-9f95-261503182548",
+      "secretKey": "57A592044FFB9618CD2B0CD6245EB131",
+      "passphrase": "Abc.1234"
+      // IP : ""
+      // 备注名 : "sim"
+      // 权限 : "读取/提现/交易"
+    }
+  },
+  "url": {
+    "实盘": {
+      "REST": "https://www.okx.com",
+      "WebSocket公共频道": "wss://ws.okx.com:8443/ws/v5/public",
+      "WebSocket私有频道": "wss://ws.okx.com:8443/ws/v5/private",
+      "WebSocket业务频道": "wss://ws.okx.com:8443/ws/v5/business"
+    },
+    "模拟盘": {
+      "REST": "https://www.okx.com",
+      "WebSocket公共频道": "wss://wspap.okx.com:8443/ws/v5/public",
+      "WebSocket私有频道": "wss://wspap.okx.com:8443/ws/v5/private",
+      "WebSocket业务频道": "wss://wspap.okx.com:8443/ws/v5/business"
+    }
+  }
+}

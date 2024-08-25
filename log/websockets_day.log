@@ -1,0 +1,930 @@
+2024-08-24 23-14-05,386 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-24 23-14-05,561 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-24 23-14-05,561 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-24 23-14-05,561 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-24 23-14-05,562 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-24 23-14-05,562 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: k3d3fZ80E7OW9H73ZG48Tg==
+2024-08-24 23-14-05,562 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-24 23-14-05,563 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-24 23-14-05,563 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-24 23-14-05,789 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-24 23-14-05,789 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 15:14:06 GMT
+2024-08-24 23-14-05,789 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-24 23-14-05,789 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-24 23-14-05,789 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: kSh1bwFKX2aPaQHyB8kDoKMhfDU=
+2024-08-24 23-14-05,790 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-24 23-14-05,790 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-24 23-14-05,790 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=uA9SG4wDNLjdljDLBJvscoIFndq.7bwaMRfLX6wD1xc-1724512446-1.0.1.1-HGENpKneMWuWzTQAOKu.xGqHR4q3U.JyLRBtVj7yX55nz1arY3ZAFC.doUcUHBa1VKr8.hWJNOq_TlVprmSccQ; path=/; expires=Sat, 24-Aug-24 15:44:06 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-24 23-14-05,790 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-24 23-14-05,790 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b844a439f649e3b-SIN
+2024-08-24 23-14-05,790 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-24 23-14-05,792 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...rwlEbUlrJpCRcZEIXk="}]}' [184 bytes]
+2024-08-24 23-14-06,208 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"50480b70"}' [57 bytes]
+2024-08-24 23-14-10,809 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-24 23-14-10,942 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"50480b70"}' [81 bytes]
+2024-08-24 23-14-10,942 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"50480b70"}' [85 bytes]
+2024-08-24 23-14-10,942 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"50480b70"}' [82 bytes]
+2024-08-24 23-14-10,954 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"50480b70"}' [86 bytes]
+2024-08-24 23-14-10,954 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"50480b70"}' [85 bytes]
+2024-08-24 23-14-10,955 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"50480b70"}' [99 bytes]
+2024-08-24 23-14-11,049 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4512451358","upl":""}]}' [859 bytes]
+2024-08-24 23-14-11,049 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-24 23-14-11,120 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-24 23-14-11,253 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"50480b70"}' [87 bytes]
+2024-08-24 23-14-11,433 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-24 23-14-21,454 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-24 23-14-21,454 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-24 23-14-21,563 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-24 23-17-38,937 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-24 23-17-40,258 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: 0i38sJnGKbmWwNSCDNUlaw==
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-24 23-17-40,259 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-24 23-17-40,765 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-24 23-17-40,765 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 15:17:40 GMT
+2024-08-24 23-17-40,766 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-24 23-17-40,766 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-24 23-17-40,766 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: KrbIjqV7LnbHBaqT20bnKoItMuY=
+2024-08-24 23-17-40,766 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-24 23-17-40,766 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-24 23-17-40,767 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=pDJLB2cZF8IXOV34Pi0sAlfLc3jopyj_SSGfiG5zpk0-1724512660-1.0.1.1-.qLs8PZ5kaAjwyxFQlupxXzdNtRj7jci1uxXFZXikO_3cxbFDHSY2hxT3l8l0AiRGPOH.T.flnvbxjgggxISQA; path=/; expires=Sat, 24-Aug-24 15:47:40 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-24 23-17-40,767 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-24 23-17-40,767 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b844f82a93ac865-HKG
+2024-08-24 23-17-40,768 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-24 23-17-40,768 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...1sE40gS+VCFyEOFcUA="}]}' [184 bytes]
+2024-08-24 23-17-40,999 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"5df13b10"}' [57 bytes]
+2024-08-24 23-17-45,779 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-24 23-17-45,994 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"5df13b10"}' [81 bytes]
+2024-08-24 23-17-45,995 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"5df13b10"}' [85 bytes]
+2024-08-24 23-17-45,995 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"5df13b10"}' [82 bytes]
+2024-08-24 23-17-45,996 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"5df13b10"}' [86 bytes]
+2024-08-24 23-17-45,996 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"5df13b10"}' [85 bytes]
+2024-08-24 23-17-45,996 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"5df13b10"}' [99 bytes]
+2024-08-24 23-17-46,057 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4512666257","upl":""}]}' [859 bytes]
+2024-08-24 23-17-46,092 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-24 23-17-46,403 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-24 23-17-56,425 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-24 23-17-56,425 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-24 23-17-56,635 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 00-00-46,188 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: +uNEiIhKgnpEuApCEceN/A==
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 00-00-47,129 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 00-00-47,363 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 00-00-47,363 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 16:00:47 GMT
+2024-08-25 00-00-47,364 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 00-00-47,364 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 00-00-47,364 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: yWBiR/cmVa+ExiigbjHSpvneWIc=
+2024-08-25 00-00-47,364 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 00-00-47,364 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 00-00-47,364 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=l.L5GgoFxdUEyrJjbArSyj61DuSZgZtoRffVn6B4LIU-1724515247-1.0.1.1-VcJm3B.9PKaGRU4H9Gfq0b_tRxxsVaizdJxjgxwaxd1.P.wZE3EO2hn5CAe.1ImrSJpC8CaT92qIeh6wfP3M0w; path=/; expires=Sat, 24-Aug-24 16:30:47 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 00-00-47,365 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 00-00-47,365 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b848ea97a564086-SIN
+2024-08-25 00-00-47,368 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 00-00-47,368 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...679gfUs/mIhW8sPGsE="}]}' [184 bytes]
+2024-08-25 00-00-47,520 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"d5ec42fd"}' [57 bytes]
+2024-08-25 00-00-52,392 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 00-00-52,531 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"d5ec42fd"}' [81 bytes]
+2024-08-25 00-00-52,532 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"d5ec42fd"}' [85 bytes]
+2024-08-25 00-00-52,532 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"d5ec42fd"}' [82 bytes]
+2024-08-25 00-00-52,532 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"d5ec42fd"}' [86 bytes]
+2024-08-25 00-00-52,533 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"d5ec42fd"}' [85 bytes]
+2024-08-25 00-00-52,533 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"d5ec42fd"}' [99 bytes]
+2024-08-25 00-00-52,629 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4515252969","upl":""}]}' [876 bytes]
+2024-08-25 00-00-52,630 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 00-00-52,703 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 00-00-53,011 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 00-01-03,015 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 00-01-03,015 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 00-01-03,352 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 00-01-44,200 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-03-23,251 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-03-23,458 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 00-03-23,459 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 00-03-23,459 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 00-03-23,460 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 00-03-23,460 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: kbIIAqyjPFZ7vKHM0e9wWw==
+2024-08-25 00-03-23,460 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 00-03-23,460 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 00-03-23,460 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 00-03-23,699 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 00-03-23,699 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 16:03:24 GMT
+2024-08-25 00-03-23,699 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: EaSZXv9Dw2Xp9lrNGbIsUacFuzU=
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=Lec0Kx4ygSC6T04SmK_HvZxE6lTVcSuEk1FOSBNM54Y-1724515404-1.0.1.1-4Ba2XeWDkkKRmJeo0uuM5Q6jdsRn1PHymbqzyhck0anjEmklhp5Kv6ogFUHgRtDVrEznHWUJT00fV0Od0O8_UQ; path=/; expires=Sat, 24-Aug-24 16:33:24 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b84927a8e24cdee-SIN
+2024-08-25 00-03-23,700 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 00-03-23,701 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...NtQ6b9Q3x3s1h74/MU="}]}' [184 bytes]
+2024-08-25 00-03-23,842 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"886953cb"}' [57 bytes]
+2024-08-25 00-03-28,705 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 00-03-28,849 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"886953cb"}' [81 bytes]
+2024-08-25 00-03-28,849 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"886953cb"}' [85 bytes]
+2024-08-25 00-03-28,849 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"886953cb"}' [82 bytes]
+2024-08-25 00-03-28,850 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"886953cb"}' [86 bytes]
+2024-08-25 00-03-28,850 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"886953cb"}' [85 bytes]
+2024-08-25 00-03-28,850 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"886953cb"}' [99 bytes]
+2024-08-25 00-03-28,860 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4515409209","upl":""}]}' [867 bytes]
+2024-08-25 00-03-28,860 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 00-03-29,018 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 00-03-29,147 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"886953cb"}' [87 bytes]
+2024-08-25 00-03-29,335 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 00-03-39,345 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 00-03-39,345 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 00-03-39,474 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 00-04-31,149 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-04-31,426 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 00-04-31,426 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 00-04-31,427 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 00-04-31,427 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 00-04-31,427 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: HJQGRQC2edgQLL3DA6JEMA==
+2024-08-25 00-04-31,427 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 00-04-31,427 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 00-04-31,427 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 16:04:32 GMT
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: d9oSbqTeZC79azR+A1W9PxvzXxQ=
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 00-04-31,656 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=ljBCTqFm_4ec8qd4nqCnCKWRa2WRbq7UEKOZxrs8SJg-1724515472-1.0.1.1-iUKfo88DTU0vnKaKp9VhmjU7dySr2fxDKwkSW3j690HEDSr4CJ_SDSWyKhFFUsZ5FYEDffoAl4Up4kxLdyQy3A; path=/; expires=Sat, 24-Aug-24 16:34:32 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 00-04-31,657 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 00-04-31,657 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8494234b644bf2-SIN
+2024-08-25 00-04-31,657 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 00-04-31,657 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...78PVGoAIVgsxsElbBo="}]}' [184 bytes]
+2024-08-25 00-04-31,804 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"4436f956"}' [57 bytes]
+2024-08-25 00-04-36,673 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 00-04-36,842 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"4436f956"}' [81 bytes]
+2024-08-25 00-04-36,842 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"4436f956"}' [85 bytes]
+2024-08-25 00-04-36,842 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"4436f956"}' [82 bytes]
+2024-08-25 00-04-36,843 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"4436f956"}' [86 bytes]
+2024-08-25 00-04-36,843 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"4436f956"}' [85 bytes]
+2024-08-25 00-04-36,843 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"4436f956"}' [99 bytes]
+2024-08-25 00-04-36,981 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 00-04-36,984 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4515477193","upl":""}]}' [859 bytes]
+2024-08-25 00-04-36,985 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 00-04-37,189 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"4436f956"}' [87 bytes]
+2024-08-25 00-04-37,291 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 00-04-47,305 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 00-04-47,305 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 00-04-47,401 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 00-05-48,873 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-05-49,229 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: H1deyhGukzof3xjXVUOHfg==
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 00-05-49,230 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 16:05:49 GMT
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: sNHPBPQthqzxc5G0zWZy3RqC1oo=
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=ttTPj7PlymuD7FS1aesNEppDVKSGxIOOKcrp4repRDs-1724515549-1.0.1.1-UpnDfZVtU298_REg7WUyui2XXL_INHGUi0GrjZzc8q3nr1x6O_UF5a9r.w440x0B1Lg8c.KaIKjgBgD3.JU8UQ; path=/; expires=Sat, 24-Aug-24 16:35:49 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8496099959407a-SIN
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 00-05-49,484 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...UC4bCTRXL2IXUxmZbY="}]}' [184 bytes]
+2024-08-25 00-05-49,901 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"fc63136d"}' [57 bytes]
+2024-08-25 00-05-53,936 |      DEBUG | websockets.client | protocol.py 1399 | 
+! failing connection with code 1006
+2024-08-25 00-05-53,937 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 00-06-24,079 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: HvSt1pFIGepLWOVk8B/9vw==
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 00-06-24,277 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 00-06-24,517 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 00-06-24,517 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 16:06:24 GMT
+2024-08-25 00-06-24,517 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 00-06-24,518 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 00-06-24,518 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: G8TyFzp8/o5phEmQpFgJAp6/6M4=
+2024-08-25 00-06-24,518 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 00-06-24,518 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 00-06-24,518 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=lJSeDezT3SgTpJCzpKpzF5sNt3oZS2uYT9FG5_QLQnk-1724515584-1.0.1.1-WZv7Sg4bvWeczXAggnkbMJiwTi1THYOpUdExmcAPNSmceirZr4gefAbpZ.KHOPSat8XdTexE4U.9YudjWZJ6ew; path=/; expires=Sat, 24-Aug-24 16:36:24 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 00-06-24,518 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 00-06-24,519 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8496e4a98a4dd4-SIN
+2024-08-25 00-06-24,519 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 00-06-24,519 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...5zW1MEgNKrRHWyftOk="}]}' [184 bytes]
+2024-08-25 00-06-24,661 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"b72ff336"}' [57 bytes]
+2024-08-25 00-06-29,532 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 00-06-29,684 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"b72ff336"}' [81 bytes]
+2024-08-25 00-06-29,684 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"b72ff336"}' [85 bytes]
+2024-08-25 00-06-29,684 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"b72ff336"}' [82 bytes]
+2024-08-25 00-06-29,690 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"b72ff336"}' [86 bytes]
+2024-08-25 00-06-29,690 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"b72ff336"}' [85 bytes]
+2024-08-25 00-06-29,691 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"b72ff336"}' [99 bytes]
+2024-08-25 00-06-29,720 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4515590067","upl":""}]}' [859 bytes]
+2024-08-25 00-06-29,720 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 00-06-29,836 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 00-06-30,008 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"b72ff336"}' [87 bytes]
+2024-08-25 00-06-30,147 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 00-06-40,156 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 00-06-40,156 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 00-06-40,261 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 00-13-02,933 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: y4m6u4uWYWVpGwHmOQU1tg==
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 00-13-03,114 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 00-13-03,337 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 00-13-03,337 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 16:13:03 GMT
+2024-08-25 00-13-03,338 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 00-13-03,338 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 00-13-03,338 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: +i9m8oc1GeGAw/XCKa44Ry7SPeo=
+2024-08-25 00-13-03,338 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 00-13-03,338 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 00-13-03,339 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=1kSUKp06zRa591Cu4BiQOVDvWYXwUGZozbQ1IBmeKN4-1724515983-1.0.1.1-XQ7XGOav0NTKc_5OZMRrQutNMqZtqWik9C72Zz1If7DAXnqvCyTqHmXMS63UqcT0.nHjf1i.P1sUVK.PkLJ.wg; path=/; expires=Sat, 24-Aug-24 16:43:03 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 00-13-03,339 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 00-13-03,339 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b84a0a16b644a29-SIN
+2024-08-25 00-13-03,340 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 00-13-03,340 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "1904c4d0-a...oxOqWXIT5GhTfkGG+E="}]}' [184 bytes]
+2024-08-25 00-13-03,544 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"9541b9ae"}' [57 bytes]
+2024-08-25 00-13-08,349 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 00-13-08,599 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"9541b9ae"}' [81 bytes]
+2024-08-25 00-13-08,599 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"9541b9ae"}' [85 bytes]
+2024-08-25 00-13-08,600 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"9541b9ae"}' [82 bytes]
+2024-08-25 00-13-08,600 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"9541b9ae"}' [86 bytes]
+2024-08-25 00-13-08,600 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"9541b9ae"}' [85 bytes]
+2024-08-25 00-13-08,600 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"9541b9ae"}' [99 bytes]
+2024-08-25 00-13-08,622 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4515988964","upl":""}]}' [859 bytes]
+2024-08-25 00-13-08,622 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 00-13-08,648 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 00-13-08,833 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"9541b9ae"}' [87 bytes]
+2024-08-25 00-13-08,960 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 00-13-18,961 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 00-13-18,961 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 00-13-19,067 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 03-00-24,603 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 03-00-24,921 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: pYqBVl/Qg6BeblmBB7B+6A==
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 03-00-24,922 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 03-00-25,136 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 03-00-25,136 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sat, 24 Aug 2024 19:00:25 GMT
+2024-08-25 03-00-25,137 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 03-00-25,137 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 03-00-25,137 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: /k0UzLGKnE4jTo++UhehnYjV2Dw=
+2024-08-25 03-00-25,137 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 03-00-25,137 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 03-00-25,137 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=s_NFsAgt4w5BOufyWNANmTByWWwYLRUCQfb4DePY1_U-1724526025-1.0.1.1-2qFzNjZpyn9Ho9INMaBGLfxMbjNT_wawahw4RMI.Lnj62Vj1AjrSlQQcJ0nHx4n34E_oRePR1RRkydYgzhXR3A; path=/; expires=Sat, 24-Aug-24 19:30:25 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 03-00-25,138 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 03-00-25,138 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8595c83bf5ce0e-SIN
+2024-08-25 03-00-25,148 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 03-00-25,149 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "0c240dca-0...GZrAIiWIiumlAIi8rs="}]}' [184 bytes]
+2024-08-25 03-00-25,351 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"eb737cf7"}' [57 bytes]
+2024-08-25 03-00-30,162 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 03-00-30,289 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"eb737cf7"}' [81 bytes]
+2024-08-25 03-00-30,289 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"eb737cf7"}' [85 bytes]
+2024-08-25 03-00-30,289 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"eb737cf7"}' [82 bytes]
+2024-08-25 03-00-30,289 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"eb737cf7"}' [86 bytes]
+2024-08-25 03-00-30,290 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"eb737cf7"}' [85 bytes]
+2024-08-25 03-00-30,290 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"eb737cf7"}' [99 bytes]
+2024-08-25 03-00-30,399 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4526030356","upl":""}]}' [868 bytes]
+2024-08-25 03-00-30,399 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 03-00-30,478 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 03-00-30,620 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"eb737cf7"}' [87 bytes]
+2024-08-25 03-00-30,793 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 03-00-40,804 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 03-00-40,804 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 03-00-40,901 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 18-37-34,044 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 18-37-34,397 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 18-37-34,398 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 18-37-34,398 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 18-37-34,398 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 18-37-34,398 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: Z9eIZNSqhT39cNP86ypFcg==
+2024-08-25 18-37-34,399 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 18-37-34,399 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 18-37-34,399 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 18-37-34,632 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 18-37-34,633 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sun, 25 Aug 2024 10:37:34 GMT
+2024-08-25 18-37-34,633 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 18-37-34,633 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 18-37-34,633 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: 4dlgIJk+F/jzYyItVo5TRnFJlPw=
+2024-08-25 18-37-34,633 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 18-37-34,633 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 18-37-34,634 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=3W0BsQrQjeiiW.pvKeRtOIiHjr1Y0qKCOjy5wHPSJqc-1724582254-1.0.1.1-w2.ra.7jI5nIG1mYMWMIHSpC85cFWMpHJgDwrzrZw4iiegtXnn2.jGCvhno4hWttYA9FM1bdl_ayVQnoJPBBoQ; path=/; expires=Sun, 25-Aug-24 11:07:34 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 18-37-34,634 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 18-37-34,634 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8af2930c9ba060-SIN
+2024-08-25 18-37-34,635 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 18-37-34,637 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "0c240dca-0...To0pwuajpMa1WcyvkM="}]}' [184 bytes]
+2024-08-25 18-37-34,840 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"1f88b51c"}' [57 bytes]
+2024-08-25 18-37-39,641 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 18-37-39,777 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"1f88b51c"}' [81 bytes]
+2024-08-25 18-37-39,777 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"1f88b51c"}' [85 bytes]
+2024-08-25 18-37-39,777 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"1f88b51c"}' [82 bytes]
+2024-08-25 18-37-39,777 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"1f88b51c"}' [86 bytes]
+2024-08-25 18-37-39,777 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"1f88b51c"}' [85 bytes]
+2024-08-25 18-37-39,777 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"1f88b51c"}' [99 bytes]
+2024-08-25 18-37-39,804 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4582259846","upl":""}]}' [868 bytes]
+2024-08-25 18-37-39,804 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 18-37-39,937 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 18-37-40,084 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"1f88b51c"}' [87 bytes]
+2024-08-25 18-37-40,230 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 18-37-50,244 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 18-37-50,244 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 18-37-50,348 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 19-02-16,264 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 19-02-16,429 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 19-02-16,429 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 19-02-16,429 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 19-02-16,430 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 19-02-16,430 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: IeQEo99GCurfsDoUz15dyg==
+2024-08-25 19-02-16,430 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 19-02-16,430 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 19-02-16,430 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 19-02-16,654 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 19-02-16,654 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sun, 25 Aug 2024 11:02:16 GMT
+2024-08-25 19-02-16,655 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 19-02-16,655 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 19-02-16,655 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: EhLTlO3j/ejyjihw0MhXwLOIdgE=
+2024-08-25 19-02-16,655 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 19-02-16,655 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 19-02-16,656 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=k23ZTHjhrYZPYUXOFF_yzdgdet2PET7hBfrkeGg5CgE-1724583736-1.0.1.1-H0q1iNzJWm4d97fKyONUHA2LYqxW57V97EASU6VkBICGAxreVdIbLOwFr6Ma4r.Ft3hikhP2A6NVhbX4MYpgnA; path=/; expires=Sun, 25-Aug-24 11:32:16 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 19-02-16,656 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 19-02-16,656 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8b16c1cdfb89a4-SIN
+2024-08-25 19-02-16,666 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 19-02-16,667 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "0c240dca-0...jcqw7JVDe0M9c9tAXY="}]}' [184 bytes]
+2024-08-25 19-02-16,807 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"a5b21ff4"}' [57 bytes]
+2024-08-25 19-02-21,673 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 19-02-21,805 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"a5b21ff4"}' [81 bytes]
+2024-08-25 19-02-21,806 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"a5b21ff4"}' [85 bytes]
+2024-08-25 19-02-21,806 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"a5b21ff4"}' [82 bytes]
+2024-08-25 19-02-21,807 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"a5b21ff4"}' [86 bytes]
+2024-08-25 19-02-21,807 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"a5b21ff4"}' [85 bytes]
+2024-08-25 19-02-21,807 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"a5b21ff4"}' [99 bytes]
+2024-08-25 19-02-21,906 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4583741965","upl":""}]}' [859 bytes]
+2024-08-25 19-02-21,906 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 19-02-21,981 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 19-02-22,113 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"a5b21ff4"}' [87 bytes]
+2024-08-25 19-02-22,294 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 19-02-32,304 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 19-02-32,304 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 19-02-32,400 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 19-42-49,178 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: 9mVndWRXt3rJaVTpWqOViA==
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 19-42-50,534 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sun, 25 Aug 2024 11:42:51 GMT
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: 7WuEPovVKLIOaibr3lh4pAAQ/uQ=
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=bbCOmr4m1mE9gPAMnFSbiAPMXwuDU4lj1mz7iVHna6Y-1724586171-1.0.1.1-_sEu7yTvat6NJHp1bSnsE6yqcUHdc2NsZ_WjXTZt3d2iQ6lZgRxR6WZZwWj34FSwrdTTeKMDLhRXp7oABa5Dgw; path=/; expires=Sun, 25-Aug-24 12:12:51 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8b52308f17c830-HKG
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 19-42-51,047 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "0c240dca-0...+tVLmPbvBLto89D0eQ="}]}' [184 bytes]
+2024-08-25 19-42-51,293 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"2bdc2eff"}' [57 bytes]
+2024-08-25 19-42-56,048 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 19-42-56,268 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"2bdc2eff"}' [81 bytes]
+2024-08-25 19-42-56,268 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"2bdc2eff"}' [85 bytes]
+2024-08-25 19-42-56,268 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"2bdc2eff"}' [82 bytes]
+2024-08-25 19-42-56,269 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"2bdc2eff"}' [86 bytes]
+2024-08-25 19-42-56,269 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"2bdc2eff"}' [85 bytes]
+2024-08-25 19-42-56,269 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"2bdc2eff"}' [99 bytes]
+2024-08-25 19-42-56,329 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4586176273","upl":""}]}' [859 bytes]
+2024-08-25 19-42-56,329 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 19-42-56,364 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 19-42-56,581 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"unsubscribe","arg":{"channel":"orders..."},"connId":"2bdc2eff"}' [87 bytes]
+2024-08-25 19-42-56,680 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 19-43-06,691 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 19-43-06,691 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 19-43-06,901 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
+2024-08-25 19-52-12,504 |      DEBUG | websockets.client | protocol.py 251 | 
+= connection is CONNECTING
+2024-08-25 19-52-12,832 |      DEBUG | websockets.client |  client.py 111 | 
+> GET /ws/v5/private HTTP/1.1
+2024-08-25 19-52-12,832 |      DEBUG | websockets.client |  client.py 113 | 
+> Host: wspap.okx.com:8443
+2024-08-25 19-52-12,832 |      DEBUG | websockets.client |  client.py 113 | 
+> Upgrade: websocket
+2024-08-25 19-52-12,833 |      DEBUG | websockets.client |  client.py 113 | 
+> Connection: Upgrade
+2024-08-25 19-52-12,833 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Key: yN9P/4jep8pQRqcRa8VkoA==
+2024-08-25 19-52-12,833 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Version: 13
+2024-08-25 19-52-12,833 |      DEBUG | websockets.client |  client.py 113 | 
+> Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-08-25 19-52-12,833 |      DEBUG | websockets.client |  client.py 113 | 
+> User-Agent: Python/3.12 websockets/13.0
+2024-08-25 19-52-13,427 |      DEBUG | websockets.client |  client.py 140 | 
+< HTTP/1.1 101 Switching Protocols
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< Date: Sun, 25 Aug 2024 11:52:13 GMT
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< Connection: upgrade
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< upgrade: websocket
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-accept: OdGlD11c4+FaL8YkDJlcMCW+nmE=
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< sec-websocket-extensions: permessage-deflate
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-Cache-Status: DYNAMIC
+2024-08-25 19-52-13,428 |      DEBUG | websockets.client |  client.py 142 | 
+< Set-Cookie: __cf_bm=qMZOknaqeUZXzNbKnZ4FQeib6prdmfoZLsJ1lGOMDIo-1724586733-1.0.1.1-Ds1DrLH7nxVxbSZQJJT9aFPgYD3k3lgoWCMzsG4mIVfcKddoVI3l5z3JqfkvH9avFSP_Mf3l5N1pdaW9D2nfoQ; path=/; expires=Sun, 25-Aug-24 12:22:13 GMT; domain=.okx.com; HttpOnly; Secure; SameSite=None
+2024-08-25 19-52-13,429 |      DEBUG | websockets.client |  client.py 142 | 
+< Server: cloudflare
+2024-08-25 19-52-13,429 |      DEBUG | websockets.client |  client.py 142 | 
+< CF-RAY: 8b8b5feb3aa8c862-HKG
+2024-08-25 19-52-13,429 |      DEBUG | websockets.client | protocol.py 353 | 
+= connection is OPEN
+2024-08-25 19-52-13,430 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "login", "args": [{"apiKey": "0c240dca-0...ijQzc8CO/1Ht3/ls40="}]}' [184 bytes]
+2024-08-25 19-52-13,678 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"login","msg":"","code":"0","connId":"6f9533aa"}' [57 bytes]
+2024-08-25 19-52-18,432 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "subscribe", "args": [{"channel": "accou...alance_and_position"}]}' [146 bytes]
+2024-08-25 19-52-18,642 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"account"..."},"connId":"6f9533aa"}' [81 bytes]
+2024-08-25 19-52-18,642 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"orders",..."},"connId":"6f9533aa"}' [85 bytes]
+2024-08-25 19-52-18,642 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"subscribe","arg":{"channel":"balance_..."},"connId":"6f9533aa"}' [82 bytes]
+2024-08-25 19-52-18,643 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"accoun...1","connId":"6f9533aa"}' [86 bytes]
+2024-08-25 19-52-18,643 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"orders...1","connId":"6f9533aa"}' [85 bytes]
+2024-08-25 19-52-18,643 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"event":"channel-conn-count","channel":"balanc...1","connId":"6f9533aa"}' [99 bytes]
+2024-08-25 19-52-18,673 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"account","ccy":"BTC","uid":"...4586738633","upl":""}]}' [859 bytes]
+2024-08-25 19-52-18,674 |      DEBUG | websockets.client | protocol.py 1164 | 
+< TEXT '{"arg":{"channel":"balance_and_position","uid":...Data":[],"trades":[]}]}' [378 bytes]
+2024-08-25 19-52-18,748 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "orders", "instType": "ANY"}]}' [73 bytes]
+2024-08-25 19-52-19,063 |      DEBUG | websockets.client | protocol.py 1170 | 
+> TEXT '{"op": "unsubscribe", "args": [{"channel": "acc...alance_and_position"}]}' [106 bytes]
+2024-08-25 19-52-29,062 |      DEBUG | websockets.client | protocol.py 1302 | 
+! timed out waiting for TCP close
+2024-08-25 19-52-29,062 |      DEBUG | websockets.client | protocol.py 1340 | 
+x closing TCP connection
+2024-08-25 19-52-29,245 |      DEBUG | websockets.client | protocol.py 1484 | 
+= connection is CLOSED
